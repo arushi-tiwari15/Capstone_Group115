@@ -38,7 +38,7 @@ scaler= StandardScaler()
 x_train_scaler= scaler.fit_transform(x_train)
 x_test_scaler= scaler.fit_transform(x_test)
 
-# creating K-Nearest-Neighbor classifier
+# creating Random Forest classifier
 model=RandomForestClassifier(n_estimators=20)
 model.fit(x_train_scaler, y_train)
 y_pred= model.predict(x_test_scaler)
